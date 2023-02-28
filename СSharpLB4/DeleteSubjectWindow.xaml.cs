@@ -15,22 +15,23 @@ using System.Windows.Shapes;
 namespace СSharpLB4
 {
     /// <summary>
-    /// Логика взаимодействия для AddTeacherWindow.xaml
+    /// Логика взаимодействия для DeleteSubjectWindow.xaml
     /// </summary>
-    public partial class AddTeacherWindow : Window
+    public partial class DeleteSubjectWindow : Window
     {
         private ViewModel _viewModel { get; set; }
-        public AddTeacherWindow(ViewModel viewModel)
+        public DeleteSubjectWindow(ViewModel viewModel)
         {
             InitializeComponent();
             _viewModel = viewModel;
+            SubjectsCB.ItemsSource = viewModel.Subjects;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (Validator.IsTextBoxValid(NameTB) && Validator.IsTextBoxValid(SurnameTB))
+            if (Validator.IsComboBoxValid(SubjectsCB))
             {
-                _viewModel.AddTeacher(new Teacher(NameTB.Text, SurnameTB.Text));
+                _viewModel.RemoveSubject((Subject)SubjectsCB.SelectedItem);
             }
         }
     }

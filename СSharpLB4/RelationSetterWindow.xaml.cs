@@ -30,7 +30,18 @@ namespace СSharpLB4
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            _viewModel.SetRelation((Teacher)TeachersCB.SelectedItem, (Subject)SubjectsCB.SelectedItem);
+            if (Validator.IsComboBoxValid(TeachersCB) && Validator.IsComboBoxValid(SubjectsCB))
+            {
+                _viewModel.SetRelation((Teacher)TeachersCB.SelectedItem, (Subject)SubjectsCB.SelectedItem);
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (Validator.IsComboBoxValid(TeachersCB) && Validator.IsComboBoxValid(SubjectsCB))
+            {
+                _viewModel.RemoveRelation((Teacher)TeachersCB.SelectedItem, (Subject)SubjectsCB.SelectedItem);
+            }
         }
     }
 }

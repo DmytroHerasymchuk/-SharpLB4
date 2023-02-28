@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:СSharpLB4"
         mc:Ignorable="d"
-        Title="RelationSetterWindow" Height="450" Width="800" FontSize="20">
+        Title="RelationSetterWindow" Height="300" Width="600" FontSize="20">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
@@ -16,22 +16,22 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <ComboBox x:Name="TeachersCB" Margin="40" Grid.Column="0">
+        <ComboBox x:Name="TeachersCB" Margin="40" Grid.Column="0" VerticalAlignment="Center" Grid.RowSpan="2">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Path=FullName}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox x:Name="SubjectsCB" Margin="40" Grid.Column="2" VerticalAlignment="Center" Grid.RowSpan="2">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Path=Name}"/>
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox x:Name="SubjectsCB" Margin="40" Grid.Column="2">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding Path=Name}"/>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
-        <Button Grid.Column="1" Content="Set" Height="60" Width="125" Click="Button_Click"/>
-        <Button Grid.Column="1" Grid.Row="1" Content="Remove" Height="60" Width="125"/>
+        <Button Grid.Column="1" Content="Set" Height="30" Width="100" Click="Button_Click"/>
+        <Button Grid.Column="1" Grid.Row="1" Content="Remove" Height="30" Width="100" Click="Button_Click_1"/>
 
     </Grid>
 </Window>

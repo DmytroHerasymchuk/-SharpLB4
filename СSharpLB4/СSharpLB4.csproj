@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -61,17 +64,36 @@
     <Compile Include="AddTeacherWindow.xaml.cs">
       <DependentUpon>AddTeacherWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DeleteSubjectWindow.xaml.cs">
+      <DependentUpon>DeleteSubjectWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteTeacherWindow.xaml.cs">
+      <DependentUpon>DeleteTeacherWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBroker.cs" />
     <Compile Include="RelationSetterWindow.xaml.cs">
       <DependentUpon>RelationSetterWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Subject.cs" />
+    <Compile Include="SubjectsWindow.xaml.cs">
+      <DependentUpon>SubjectsWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Teacher.cs" />
+    <Compile Include="Validator.cs" />
     <Compile Include="ViewModel.cs" />
     <Page Include="AddSubjectWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddTeacherWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeleteSubjectWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeleteTeacherWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -88,6 +110,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="RelationSetterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubjectsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -110,6 +136,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,0 +1,23 @@
+﻿<Window x:Class="СSharpLB4.DeleteTeacherWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:СSharpLB4"
+        mc:Ignorable="d"
+        Title="DeleteTeacherWindow" Height="250" Width="400" FontSize="20">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ComboBox Height="30" x:Name="TeachersCB" Margin="5">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding FullName}" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Button Grid.Column="1" Height="30" Width="100" Content="Delete" Click="Button_Click"/>
+    </Grid>
+</Window>

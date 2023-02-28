@@ -28,7 +28,10 @@ namespace СSharpLB4
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            _viewModel.AddSubject(new Subject(NameTB.Text));
+            if (Validator.IsTextBoxValid(NameTB))
+            {
+                _viewModel.AddSubject(new Subject(NameTB.Text));
+            }
         }
     }
 }

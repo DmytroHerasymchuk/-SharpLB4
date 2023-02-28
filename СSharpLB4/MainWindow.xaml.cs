@@ -45,5 +45,34 @@ namespace СSharpLB4
             Window window = new RelationSetterWindow(_viewModel);
             window.ShowDialog();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Window window = new SubjectsWindow(_viewModel);
+            window.ShowDialog();
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            Window window = new DeleteTeacherWindow(_viewModel);
+            window.ShowDialog();
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            Window window = new DeleteSubjectWindow(_viewModel);
+            window.ShowDialog();
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            _viewModel.Serialize();
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            _viewModel.Deserialize();
+            Table.ItemsSource = _viewModel.Teachers;
+        }
     }
 }

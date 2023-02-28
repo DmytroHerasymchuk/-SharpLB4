@@ -15,23 +15,16 @@ using System.Windows.Shapes;
 namespace СSharpLB4
 {
     /// <summary>
-    /// Логика взаимодействия для AddTeacherWindow.xaml
+    /// Логика взаимодействия для SubjectsWindow.xaml
     /// </summary>
-    public partial class AddTeacherWindow : Window
+    public partial class SubjectsWindow : Window
     {
         private ViewModel _viewModel { get; set; }
-        public AddTeacherWindow(ViewModel viewModel)
+        public SubjectsWindow(ViewModel viewModel)
         {
             InitializeComponent();
             _viewModel = viewModel;
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            if (Validator.IsTextBoxValid(NameTB) && Validator.IsTextBoxValid(SurnameTB))
-            {
-                _viewModel.AddTeacher(new Teacher(NameTB.Text, SurnameTB.Text));
-            }
+            Subjects.ItemsSource = _viewModel.Subjects;
         }
     }
 }

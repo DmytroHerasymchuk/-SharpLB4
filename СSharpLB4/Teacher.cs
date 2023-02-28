@@ -10,6 +10,8 @@ namespace СSharpLB4
     {
         public string Name { get; set; }
         public string Surname { get; set; }
+
+        public string FullName => $"{Surname} {Name.FirstOrDefault()}.";
         public int CountOfSubjects => Subjects.Count;
         public ICollection<Subject> Subjects { get; set; }
         public Teacher(string name, string surname)
@@ -18,5 +20,7 @@ namespace СSharpLB4
             Surname = surname;
             Subjects = new List<Subject>();
         }
+
+        
     }
 }
