@@ -7,8 +7,10 @@ using System.Collections.ObjectModel;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.IO;
+using СSharpLB4.Models;
+using СSharpLB4.Core;
 
-namespace СSharpLB4
+namespace СSharpLB4.ViewModels
 {
     public class ViewModel
     {

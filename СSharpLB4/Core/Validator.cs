@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace СSharpLB4
+namespace СSharpLB4.Core
 {
     public static class Validator
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace СSharpLB4
+namespace СSharpLB4.Models
 {
     public class Teacher
     {

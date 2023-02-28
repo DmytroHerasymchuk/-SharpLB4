@@ -11,27 +11,29 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using СSharpLB4.ViewModels;
+using СSharpLB4.Core;
+using СSharpLB4.Models;
 
-namespace СSharpLB4
+namespace СSharpLB4.Views
 {
     /// <summary>
-    /// Логика взаимодействия для DeleteSubjectWindow.xaml
+    /// Логика взаимодействия для AddSubjectWindow.xaml
     /// </summary>
-    public partial class DeleteSubjectWindow : Window
+    public partial class AddSubjectWindow : Window
     {
         private ViewModel _viewModel { get; set; }
-        public DeleteSubjectWindow(ViewModel viewModel)
+        public AddSubjectWindow(ViewModel viewModel)
         {
             InitializeComponent();
             _viewModel = viewModel;
-            SubjectsCB.ItemsSource = viewModel.Subjects;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (Validator.IsComboBoxValid(SubjectsCB))
+            if (Validator.IsTextBoxValid(NameTB))
             {
-                _viewModel.RemoveSubject((Subject)SubjectsCB.SelectedItem);
+                _viewModel.AddSubject(new Subject(NameTB.Text));
             }
         }
     }

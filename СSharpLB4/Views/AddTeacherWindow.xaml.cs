@@ -11,8 +11,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using СSharpLB4.ViewModels;
+using СSharpLB4.Core;
+using СSharpLB4.Models;
 
-namespace СSharpLB4
+namespace СSharpLB4.Views
 {
     /// <summary>
     /// Логика взаимодействия для AddTeacherWindow.xaml

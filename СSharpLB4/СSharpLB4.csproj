@@ -58,46 +58,46 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddSubjectWindow.xaml.cs">
+    <Compile Include="Views\AddSubjectWindow.xaml.cs">
       <DependentUpon>AddSubjectWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AddTeacherWindow.xaml.cs">
+    <Compile Include="Views\AddTeacherWindow.xaml.cs">
       <DependentUpon>AddTeacherWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DeleteSubjectWindow.xaml.cs">
+    <Compile Include="Views\DeleteSubjectWindow.xaml.cs">
       <DependentUpon>DeleteSubjectWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DeleteTeacherWindow.xaml.cs">
+    <Compile Include="Views\DeleteTeacherWindow.xaml.cs">
       <DependentUpon>DeleteTeacherWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MessageBroker.cs" />
-    <Compile Include="RelationSetterWindow.xaml.cs">
+    <Compile Include="Core\MessageBroker.cs" />
+    <Compile Include="Views\RelationSetterWindow.xaml.cs">
       <DependentUpon>RelationSetterWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Subject.cs" />
-    <Compile Include="SubjectsWindow.xaml.cs">
+    <Compile Include="Models\Subject.cs" />
+    <Compile Include="Views\SubjectsWindow.xaml.cs">
       <DependentUpon>SubjectsWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Teacher.cs" />
-    <Compile Include="Validator.cs" />
-    <Compile Include="ViewModel.cs" />
-    <Page Include="AddSubjectWindow.xaml">
+    <Compile Include="Models\Teacher.cs" />
+    <Compile Include="Core\Validator.cs" />
+    <Compile Include="ViewModels\ViewModel.cs" />
+    <Page Include="Views\AddSubjectWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AddTeacherWindow.xaml">
+    <Page Include="Views\AddTeacherWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DeleteSubjectWindow.xaml">
+    <Page Include="Views\DeleteSubjectWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DeleteTeacherWindow.xaml">
+    <Page Include="Views\DeleteTeacherWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -105,15 +105,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="RelationSetterWindow.xaml">
+    <Page Include="Views\RelationSetterWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SubjectsWindow.xaml">
+    <Page Include="Views\SubjectsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -145,5 +145,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

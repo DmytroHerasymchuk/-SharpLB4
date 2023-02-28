@@ -11,8 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using СSharpLB4.ViewModels;
 
-namespace СSharpLB4
+namespace СSharpLB4.Views
 {
     /// <summary>
     /// Логика взаимодействия для SubjectsWindow.xaml

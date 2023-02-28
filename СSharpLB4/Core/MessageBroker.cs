@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace СSharpLB4
+namespace СSharpLB4.Core
 {
     public class MessageBroker
     {
